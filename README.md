@@ -22,9 +22,7 @@ The core challenge was to schedule 7 famous historical figures for a 4-slot conf
 
 This graph visualizes the problem. Each speaker is a node, and an edge connects any two speakers who are in the same constraint group and thus cannot be scheduled at the same time.
 
-> **[Image: Your drawn constraint graph for the 7 speakers]**
->
-> *(**Developer Note:** Place your constraint graph from Part 1 of the assignment here.)*
+![Image: Drawn constraint graph for the 7 speakers](.media/Constraint_Graph.png)
 
 ---
 
@@ -43,9 +41,9 @@ The solver is a versatile tool that allows a user to select from a suite of clas
 
 ---
 
-## 🔧 Generalized Solver (Part 3)
+## 🔧 Generalized Solver
 
-The solver is not hard-coded to the speaker problem. As per the Part 3 requirement, the program first prompts the user to define their own CSP. You can define:
+The solver is not hard-coded to the speaker problem. The program first prompts the user to define their own CSP. You can define:
 1.  All **Variables** (e.g., "WA", "NT", "SA" for map coloring).
 2.  The **Domain** for each variable (e.g., "red", "green", "blue").
 3.  The **Constraints** (e.g., which variables cannot have the same value).
