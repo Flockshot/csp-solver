@@ -10,13 +10,13 @@ Developed a Constraint Satisfaction Problem (CSP) solver in Python to generate v
 The core challenge was to schedule 7 famous historical figures for a 4-slot conference (10 AM - 14 PM).
 
 * **Variables:** 7 Speakers:
-    * Alan Turing (T), Ada Lovelace (L), Niels Bohr (B), Marie Curie (C), Socrates (S), Pythagoras (P), and Isaac Newton (N).
+    * Alan Turing (T), Ada Lovelace (L), Niels Bohr (B), Marie Curie (C), Socrates (S), Pythagoras (P), and Isaac Newton (N).
 * **Domains:** 4 Time Slots (10, 11, 12, 13).
 * **Constraints:** A set of 7 rules based on attendee wishes and speaker availability. For example:
-    1.  Turing **must** be in the 10 AM slot.
-    2.  Physicists (Bohr, Curie, Newton) **must not** conflict, as PHY students want to see all three.
-    3.  Mathematicians (Lovelace, Pythagoras, Newton) **must not** conflict.
-    4.  ...and so on for AI students, the Society of Women Engineers, and other groups.
+    1.  Turing **must** be in the 10 AM slot.
+    2.  Physicists (Bohr, Curie, Newton) **must not** conflict, as PHY students want to see all three.
+    3.  Mathematicians (Lovelace, Pythagoras, Newton) **must not** conflict.
+    4.  ...and so on for AI students, the Society of Women Engineers, and other groups.
 
 ### Constraint Graph
 
@@ -36,8 +36,8 @@ The solver is a versatile tool that allows a user to select from a suite of clas
 2.  **Backtracking with Forward Checking:** Improves on pure backtracking by pruning the domains of unassigned variables after each assignment.
 3.  **Backtracking with Arc Consistency (AC-3):** (Implemented via Forward Checking in this version) A more powerful constraint propagation technique.
 4.  **Backtracking with Heuristics:**
-    * **Minimum Remaining Values (MRV):** A variable-ordering heuristic that selects the variable with the *fewest* remaining legal values in its domain.
-    * **Degree Heuristic:** A variable-ordering heuristic that selects the variable involved in the *most* constraints with other unassigned variables.
+    * **Minimum Remaining Values (MRV):** A variable-ordering heuristic that selects the variable with the *fewest* remaining legal values in its domain.
+    * **Degree Heuristic:** A variable-ordering heuristic that selects the variable involved in the *most* constraints with other unassigned variables.
 5.  **Min-Conflict Local Search:** A non-systematic algorithm that starts with a full (but conflicted) assignment and iteratively tries to *reduce* the number of conflicts.
 6.  **Step-by-Step Output:** The solver prints each variable assignment, allowing for visualization of the search path and any backtracking steps.
 
@@ -59,9 +59,9 @@ This makes the tool a flexible solver for classic CSPs like N-Queens or Map Colo
 1.  Clone the repository.
 2.  Ensure you have Python 3 installed.
 3.  Run the main script:
-    ```bash
-    python csp_solver.py
-    ```
+    ```bash
+    python csp_solver.py
+    ```
 4.  **Define your CSP:** The program will first ask you to enter the variables, their domains, and the constraints.
 5.  **Select a Solver:** Once the CSP is defined, the main menu will appear, allowing you to choose which algorithm to run.
 
